@@ -1,7 +1,7 @@
 // Theme Trader
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
-    const currentTheme = sessionStorage.getItem('theme') || 'light'; // Troque localStorage por sessionStorage
+    const currentTheme = sessionStorage.getItem('theme') || 'light'; 
 
     document.documentElement.setAttribute('data-theme', currentTheme);
 
@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
         let theme = document.documentElement.getAttribute('data-theme');
         if (theme === 'dark') {
             document.documentElement.setAttribute('data-theme', 'light');
-            sessionStorage.setItem('theme', 'light'); // Troque localStorage por sessionStorage
+            sessionStorage.setItem('theme', 'light'); 
             themeToggle.textContent = '🌙';
         } else {
             document.documentElement.setAttribute('data-theme', 'dark');
-            sessionStorage.setItem('theme', 'dark'); // Troque localStorage por sessionStorage
+            sessionStorage.setItem('theme', 'dark');
             themeToggle.textContent = '🌞';
         }
     });
