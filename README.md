@@ -1,25 +1,31 @@
-# **Meu Portfólio**
+# Portfolio Website
 
-Este é o repositório do código-fonte do meu site de portfólio, onde apresento quem sou, meus hobbies e habilidades.
+Welcome to my portfolio website! This project showcases my work as a Backend Developer, featuring a clean and responsive design with a horizontal layout. It includes sections about me, my projects, and ways to contact me.
 
-## Visão Geral
+## Features
 
-Meu portfólio é um site estático desenvolvido com HTML, CSS e JS. Ele apresenta uma página inicial com uma breve introdução sobre mim, uma seção de frases onde é possível saber mais sobre quem eu sou e as linguagens de programação que eu trabalho/já trabalhei.
+- **Responsive Design**: The website is fully responsive and works seamlessly on both desktop and mobile devices.
+- **Interactive Buttons**: Buttons for contacting me via Discord, Twitter, and GitHub.
+- **Project Showcase**: Displays my projects with descriptions, images, and links to their respective GitHub repositories.
+- **Custom Styling**: Utilizes custom CSS for a unique and modern look.
+- **JavaScript Functionality**: Includes interactive features like copying Discord username to the clipboard.
 
-## Estrutura do Projeto
+## Technologies Used
 
-O projeto está estruturado da seguinte forma:
+- **HTML**: For structuring the content.
+- **CSS**: For styling and layout, including custom animations and responsive design.
+- **JavaScript**: For interactive elements like the Discord copy button.
+- **Google Fonts**: Uses the Poppins font for a clean and modern typography.
 
-- **index.html**: O arquivo HTML principal que contém a estrutura da página.
-- **imagens/**: Pasta contendo arquivos estáticos, como imagens.
-- **CSS/**: Pasta contendo os arquivos CSS.
-  - **styles.scss**: Arquivo principal de estilos.
-- **scripts/**: Pasta opcional para arquivos JavaScript, se necessário.
-- **README.md**: O arquivo contém as informações principais do projeto.
+## Projects Showcased
 
-## Tecnologias Utilizadas
+1. **Hash Cracker**
+   - A Python tool for encrypting and decrypting words using custom mapping.
+   - [View Code](https://github.com/MatheusMrq/HashCracker)
 
-- HTML5: Para estruturação do conteúdo.
-- CSS3: Para estilização.
-- Git: Para controle de versão.
-- GitHub: Para hospedagem do repositório.
+2. **Trigonometry Calculator**
+   - A Python-based tool for calculating trigonometric functions and visualizing graphs.
+   - [View Code](https://github.com/MatheusMrq/TrigonometryInPython)
+
+3. **Coming Soon**
+   - ...
