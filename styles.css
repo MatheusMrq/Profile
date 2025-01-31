@@ -1,52 +1,185 @@
-body {
-    background: linear-gradient(to right, #333, #ccc);
-    color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+}
+.container {
     display: flex;
-    justify-content: center;
+    height: 100vh;
+}
+/* Coluna da Esquerda: Sobre Mim */
+.coluna-esquerda {
+    flex: 1;
+    background-color: #333;
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
 }
-
-.container {
-    max-width: 420px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-}
-
-.image {
-    width: 150px; 
+.foto-container {
+    width: 150px;
     height: 150px;
-    margin: 0 auto 20px; 
-    border-radius: 10px;
-    background-color: #333; 
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
-
-h1 {
+.foto-perfil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.coluna-esquerda h1 {
     font-size: 2.5em;
-    color: #fff; 
-    margin: 0 0 10px; 
-    font-weight: normal; 
+    margin-bottom: 10px;
 }
-
-p {
-    font-size: 1em;
-    margin: 0 0 20px; 
-    color: #ccc; 
+.coluna-esquerda p {
+    margin-bottom: 20px;
 }
-
-a {
-    color: #fff; 
+.contato-lista {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaçamento entre os botões */
+}
+.contato-lista li {
+    width: 100%;
+}
+.btn-contato {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #444;
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    border-bottom: 1px solid #fff; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-size: 1em;
+    height: 45px; /* Altura fixa para todos os botões */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-a:hover {
-    color: #ccc; 
-    border-bottom-color: #ccc;
+.btn-contato:hover {
+    background-color: #555;
+}
+/* Coluna da Direita: Projetos */
+.coluna-direita {
+    flex: 2;
+    background-color: #fff;
+    padding: 40px;
+    overflow-y: auto;
+}
+.coluna-direita h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.projeto {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.projeto.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+.info-projeto {
+    flex: 1;
+    margin-right: 20px;
+}
+.imagem-projeto {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.projeto h3 {
+    margin-bottom: 10px;
+}
+.projeto p {
+    margin-bottom: 20px;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #555;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+    .coluna-esquerda {
+        padding: 20px;
+    }
+    .coluna-direita {
+        padding: 20px;
+        overflow-y: visible;
+    }
+    .foto-container {
+        width: 120px;
+        height: 120px;
+    }
+    .coluna-esquerda h1 {
+        font-size: 2em;
+    }
+    .coluna-direita h2 {
+        font-size: 1.8em;
+    }
+    .projeto {
+        flex-direction: column;
+        text-align: center;
+    }
+    .info-projeto {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .imagem-projeto {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+    }
+}
+@media (max-width: 480px) {
+    .coluna-esquerda h1 {
+        font-size: 1.8em;
+    }
+    .coluna-direita h2 {
+        font-size: 1.6em;
+    }
+    .projeto {
+        padding: 15px;
+    }
+    .btn {
+        padding: 8px 16px;
+    }
 }
